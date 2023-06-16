@@ -9,7 +9,9 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 TZ='Asia/Shanghai'
 ENV DEBAIN_FRONTEND=nointeractive PIP_PREFER_BINARY=1 PIP_NO_CACHE_DIR=1
 
 RUN sed -i 's/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list && \
-    sed -i 's/security.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list && \
+    sed -i 's/security.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+
+RUN --mount=type=cache,target=/var/cache/apt \    
     apt-get update -q
 
 # https://stackoverflow.com/questions/40234847/docker-timezone-in-ubuntu-16-04-image
@@ -19,7 +21,8 @@ RUN echo $TZ > /etc/timezone && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
 
-RUN apt-get install -q -y --allow-unauthenticated --no-install-recommends \
+RUN --mount=type=cache,target=/var/cache/apt \
+    apt-get install -q -y --allow-unauthenticated --no-install-recommends \
     build-essential \
     ca-certificates \
     ccache \
