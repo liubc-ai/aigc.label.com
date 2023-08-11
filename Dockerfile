@@ -63,7 +63,8 @@ RUN pip install \
     gradio==3.27.0 \
     loguru==0.7.0 \
     Pillow==9.5.0 \
-    numpy==1.24.3
+    numpy==1.24.3 \
+    pydantic==1.10.7
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
