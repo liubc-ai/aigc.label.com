@@ -1,2 +1,4 @@
 stdout.log
 __pycache__/*
+imgs/*
+outputs/*
