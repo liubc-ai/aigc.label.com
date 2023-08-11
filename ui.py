@@ -11,8 +11,8 @@ def create_ui():
         with gr.Row():
             with gr.Column(scale=80):
                 with gr.Row():
-                    image_dir = gr.Textbox(label='image_dir')
-                    output_dir = gr.Textbox(label='output_dir')
+                    image_dir = gr.Textbox(label='image_dir', value='imgs')
+                    output_dir = gr.Textbox(label='output_dir', value='outputs')
                 prompt = gr.Textbox(label='prompt', elem_id='display_image_prompt')
                 with gr.Row():
                     save_botton = gr.Button(value='save prompt')

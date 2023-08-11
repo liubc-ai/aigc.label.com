@@ -5,7 +5,7 @@ from loguru import logger
 
 LOG_PATH = "/web/tomcat/logs/aigc.label.com/stdout.log"
 if not os.path.exists(LOG_PATH):
-    os.mknod(LOG_PATH)
+    os.makedirs(LOG_PATH)
 # LOG_PATH = "./stdout.log"
 
 LOG_LEVEL = logging.getLevelName(os.environ.get("LOG_LEVEL", "INFO"))
