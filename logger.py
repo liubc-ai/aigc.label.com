@@ -3,8 +3,8 @@ import sys
 import logging
 from loguru import logger
 
-LOG_PATH = "/web/tomcat/logs/aigc.label.com/stdout.log"
-# LOG_PATH = "./stdout.log"
+# LOG_PATH = "/web/tomcat/logs/aigc.label.com/stdout.log"
+LOG_PATH = "./stdout.log"
 
 LOG_LEVEL = logging.getLevelName(os.environ.get("LOG_LEVEL", "INFO"))
 JSON_LOGS = True if os.environ.get("JSON_LOGS", "0") == "1" else False

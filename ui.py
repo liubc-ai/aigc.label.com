@@ -50,7 +50,7 @@ def create_ui():
         image_idx.change(
             fn=ui_methods.caption_select_image,
             inputs=[output_dir, image_idx, gallery],
-            outputs=[image, prompt]
+            outputs=[image, prompt, image_idx]
         )
 
         format_dir.click(

@@ -28,16 +28,21 @@ class UI_Methods(object):
 
     def caption_select_image(self, output_dir: str, image_idx: str, images: dict):
         try:
-            image_info = images[int(image_idx)]
+            image_idx = int(image_idx)
+            if image_idx >= 0 and image_idx >= len(images):
+                image_idx -= len(images)
+            elif image_idx <= 0 and abs(image_idx) >= len(images):
+                image_idx += len(images) 
+            image_info = images[image_idx]
             image_url = image_info['data']
             resp = requests.get(image_url).content
             image = Image.open(io.BytesIO(resp))
             if os.path.exists(output_dir + f'/{image_idx}.txt'):
                 with open(output_dir + f'/{image_idx}.txt', 'r') as f:
                     prompt = f.read()
-                    return gr.update(value=image), gr.update(value=prompt)
+                    return gr.update(value=image), gr.update(value=prompt), gr.update(value=str(image_idx))
             else:
-                return gr.update(value=image), gr.update(value='')
+                return gr.update(value=image), gr.update(value=''), gr.update(value=str(image_idx))
         except Exception as exc:
             self.logger.error(f'caption_select_image error: {exc}\n {traceback.format_exc()}\n')
             return gr.update()

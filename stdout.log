@@ -30,3 +30,66 @@ ValueError: invalid literal for int() with base 10: ''
 IndexError: list index out of range
 
 
+2023-08-11 16:50:00.077 | ERROR    | utils:caption_select_image:42 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 31, in caption_select_image
+    image_info = images[int(image_idx)]
+IndexError: list index out of range
+
+
+2023-08-11 16:53:27.601 | ERROR    | utils:caption_select_image:45 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 34, in caption_select_image
+    image_info = images[image_idx]
+IndexError: list index out of range
+
+
+2023-08-11 16:54:10.843 | ERROR    | utils:caption_select_image:45 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 34, in caption_select_image
+    image_info = images[image_idx]
+IndexError: list index out of range
+
+
+2023-08-11 16:58:21.732 | ERROR    | utils:caption_select_image:45 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 34, in caption_select_image
+    image_info = images[image_idx]
+IndexError: list index out of range
+
+
+2023-08-11 16:59:56.170 | ERROR    | utils:caption_select_image:47 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 36, in caption_select_image
+    image_info = images[image_idx]
+IndexError: list index out of range
+
+
+2023-08-11 17:00:04.084 | ERROR    | utils:caption_select_image:47 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 36, in caption_select_image
+    image_info = images[image_idx]
+IndexError: list index out of range
+
+
+2023-08-11 17:00:04.744 | ERROR    | utils:caption_select_image:47 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 36, in caption_select_image
+    image_info = images[image_idx]
+IndexError: list index out of range
+
+
+2023-08-11 17:00:05.535 | ERROR    | utils:caption_select_image:47 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 36, in caption_select_image
+    image_info = images[image_idx]
+IndexError: list index out of range
+
+
+2023-08-11 17:00:05.892 | ERROR    | utils:caption_select_image:47 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 36, in caption_select_image
+    image_info = images[image_idx]
+IndexError: list index out of range
+
+

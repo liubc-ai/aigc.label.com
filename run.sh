@@ -24,7 +24,8 @@ function start_container(){
 }
 
 function view_docker_logs(){
-    tail -f "/web/tomcat/logs/aigc.label.com/stdout.log"
+    # tail -f "/web/tomcat/logs/aigc.label.com/stdout.log"
+    tail -f "./stdout.log"
 }
 
 function view_container_id() {
