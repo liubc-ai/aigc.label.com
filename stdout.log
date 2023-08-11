@@ -1,0 +1,32 @@
+2023-08-11 15:44:47.711 | ERROR    | utils:save_prompt:53 - save_label error: [Errno 13] Permission denied: '/0.png'
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 48, in save_prompt
+    image.save(save_path)
+  File "/home/lbc/miniconda3/envs/webui-dev/lib/python3.10/site-packages/PIL/Image.py", line 2429, in save
+    fp = builtins.open(filename, "w+b")
+PermissionError: [Errno 13] Permission denied: '/0.png'
+
+
+2023-08-11 15:45:57.290 | ERROR    | utils:save_prompt:53 - save_label error: [Errno 2] No such file or directory: '/mnt/d/WOA/caches/samples_res/0.png'
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 48, in save_prompt
+    image.save(save_path)
+  File "/home/lbc/miniconda3/envs/webui-dev/lib/python3.10/site-packages/PIL/Image.py", line 2429, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/d/WOA/caches/samples_res/0.png'
+
+
+2023-08-11 15:46:28.570 | ERROR    | utils:caption_select_image:42 - caption_select_image error: invalid literal for int() with base 10: ''
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 31, in caption_select_image
+    image_info = images[int(image_idx)]
+ValueError: invalid literal for int() with base 10: ''
+
+
+2023-08-11 15:54:18.266 | ERROR    | utils:caption_select_image:42 - caption_select_image error: list index out of range
+ Traceback (most recent call last):
+  File "/home/lbc/docker_projects/aigc.label.com/utils.py", line 31, in caption_select_image
+    image_info = images[int(image_idx)]
+IndexError: list index out of range
+
+
