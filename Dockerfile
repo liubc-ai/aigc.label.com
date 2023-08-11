@@ -61,7 +61,9 @@ RUN python -m pip install --upgrade pip
 
 RUN pip install \
     gradio==3.27.0 \
-    loguru==0.7.0
+    loguru==0.7.0 \
+    Pillow==9.5.0 \
+    numpy==1.24.3
 
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
