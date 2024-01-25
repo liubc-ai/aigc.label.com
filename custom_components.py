@@ -35,13 +35,13 @@ class Gallery(gr.Gallery):
             caption = None
             if isinstance(img, tuple) or isinstance(img, list):
                 img, caption = img
-            if isinstance(img, np.ndarray):
-                file = processing_utils.save_array_to_file(img)
-                file_path = str(utils.abspath(file.name))
+            elif isinstance(img, np.ndarray):
+                file = self.img_array_to_temp_file(img, dir=self.DEFAULT_TEMP_DIR)
+                file_path = str(utils.abspath(file))
                 self.temp_files.add(file_path)
             elif isinstance(img, _Image.Image):
-                file = processing_utils.save_pil_to_file(img)
-                file_path = str(utils.abspath(file.name))
+                file = self.pil_to_temp_file(img, dir=self.DEFAULT_TEMP_DIR)
+                file_path = str(utils.abspath(file))
                 self.temp_files.add(file_path)
             elif isinstance(img, str):
                 # if utils.validate_url(img):
